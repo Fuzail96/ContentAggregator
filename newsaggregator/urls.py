@@ -3,6 +3,6 @@ from newsaggregator.views import scrape, news_list
 
 
 urlpatterns = [
-  path('scrape/', scrape, name="scrape"),
+  path('scrape', scrape, name="scrape"),
   path('', news_list, name="home"),
 ]
