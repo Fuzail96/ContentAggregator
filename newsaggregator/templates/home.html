@@ -7,35 +7,41 @@
 <body>
     <div class="jumbotron">
         <center><h1>Article Aggregator</h1>
+            <br>
            <a href="{% url 'scrape' %}" class="btn btn-danger">Get Articles</a>
-        </form>
     </center>
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col-6">
-                    <h3 class="text-centre">Articles From Forbes</h3>
-                    {% for object in object_list %}
-                <a href="{{object.url}}"><h5> -  {{object.title}} </h5></a>
+                    <h3 class="text-centre">Articles From Zillow</h3>
+                <br>
+                    {% for obj in object1 %}
+                    <a href="{{obj.url}}"><h5> -  {{obj.title}} </h5></a>
                     <hr>
                     {% endfor %}
                     <br>
             </div>
-            <div class="col-6">
+
+            <br>
+             <div class="col-6">
                     <h3 class="text-centre">Articles From RealtyTimes</h3>
-                    {% for object in objects %}
-                <a href="{{object.url}}"><h5> -  {{object.title}} </h5></a>
+                 <br>
+                    {% for obj in object2 %}
+                    <a href="{{obj.url}}"><h5> -  {{obj.title}} </h5></a>
                     <hr>
                     {% endfor %}
                     <br>
             </div>
         </div>
+    </div>
 
 
-</div>
+
     <script
-src="http://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
